@@ -1,27 +1,27 @@
-# Dinosaurs2
+# Galvanize Dinosaurs - Profiles
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.4.
+## Instructions
 
-## Development server
+1. Refactor the provided site so that it uses your chosen front end framework.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+2. Key functionality that you need to replicate includes:
+  - Getting data from an API with fetch
+  - Rendering that data in a list of profiles
+  - Toggling the profile on a click event
+  - Rendering each profile's list of skills
 
-## Code scaffolding
+3. Your app must be broken down into components for the:
+  - header
+  - profiles
+  - skill list
+  - footer
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Testing
 
-## Build
+1. Run `npm install`.
+2. Host your app locally on port `8080`.
+3. Navigate to this folder and run `npm test`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+#### Deployed Link
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+#### Framework of choice
