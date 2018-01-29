@@ -8,6 +8,8 @@ import { ProfilesComponent } from './components/profiles/profiles.component';
 import { SkillListComponent } from './components/skill-list/skill-list.component';
 import { FooterComponent } from './components/footer/footer.component'
 
+import { ProfileService } from './services/profile.service'
+
 
 @NgModule({
   declarations: [
@@ -20,7 +22,7 @@ import { FooterComponent } from './components/footer/footer.component'
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [ProfileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

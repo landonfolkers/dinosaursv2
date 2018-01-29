@@ -1,4 +1,4 @@
-# Galvanize Dinosaurs - Profiles
+# Galvanize Dinosaurs - Profiles 
 
 ## Instructions
 
