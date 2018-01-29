@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProfileService } from '../../services/profile.service'
+import { Profile } from '../../models/profile.model'
 
 @Component({
   selector: 'app-profiles',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profiles.component.css']
 })
 export class ProfilesComponent implements OnInit {
+  profiles: Profile[];
 
-  constructor() { }
+  constructor(public profileService: ProfileService) { }
 
   ngOnInit() {
+    this.profileService.getProfiles().subscribe(profiles => {
+      profiles.forEach(profile => {
+        profile.isHidden = false
+      })
+      this.profiles = profiles
+    })
   }
 
 }
