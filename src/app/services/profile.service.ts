@@ -2,13 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { Profile } from '../models/profile.model';
-import { Subject } from 'rxjs/Subject';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { setTimeout } from 'timers';
 
 @Injectable()
 export class ProfileService {
   profilesUrl: string = '../../assets/dinosaurs.json';
-  public newSkillsSubject = new Subject<string[]>();
+  public newSkillsSubject = new BehaviorSubject<string[]>(["Loading skills"]);
 
   constructor(private _http: HttpClient) { }
 
@@ -17,7 +17,7 @@ export class ProfileService {
   }
 
   pushSkills(skillsArray: string[]) {
-    console.log(skillsArray);
+    //console.log(skillsArray);
     this.newSkillsSubject.next(skillsArray)
   }
 

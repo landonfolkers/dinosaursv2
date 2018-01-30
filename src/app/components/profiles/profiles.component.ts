@@ -18,10 +18,10 @@ export class ProfilesComponent implements OnInit {
       profiles.forEach(profile => {
         profile.id = i++
         profile.isHidden = false
-        this.profileService.pushSkills(profile.skills)
       })
       this.profiles = profiles
     })
+    setTimeout(() => {this.profiles.forEach(profile => {this.profileService.pushSkills(profile.skills)})}, 10)
   }
 
   toggleSkills(event) {

@@ -14,10 +14,11 @@ export class SkillListComponent implements OnInit {
 
   ngOnInit() {
     this.profileService.newSkillsSubject.subscribe(data => {
-      console.log(data)
+      //console.log(data)
+      this.skills.push(data)
     })
 
-    // setTimeout(() => {console.log(this.skills)}, 3000)
+    //setTimeout(() => {console.log(this.skills)}, 3000)
   }
 
 }
