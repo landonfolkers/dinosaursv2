@@ -8,7 +8,7 @@
             <img src="../../{{profile.image}}" alt="Image Not Loaded" class="{{profile.id}}">
             <h2 class="{{profile.id}}">{{profile.name}}</h2>
           </header>
-          <app-skill-list class="{{profile.id}}" [hidden]="!profile.isHidden"></app-skill-list>
+          <app-skill-list class="{{profile.id}}" [hidden]="profile.isHidden" [skills]="profile.skills"></app-skill-list>
         </div>
       </li>
     </ul>

@@ -17,11 +17,10 @@ export class ProfilesComponent implements OnInit {
       let i = 0
       profiles.forEach(profile => {
         profile.id = i++
-        profile.isHidden = false
+        profile.isHidden = true
       })
       this.profiles = profiles
     })
-    setTimeout(() => {this.profiles.forEach(profile => {this.profileService.pushSkills(profile.skills)})}, 10)
   }
 
   toggleSkills(event) {
