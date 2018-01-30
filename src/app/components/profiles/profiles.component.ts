@@ -14,11 +14,21 @@ export class ProfilesComponent implements OnInit {
 
   ngOnInit() {
     this.profileService.getProfiles().subscribe(profiles => {
+      let i = 0
       profiles.forEach(profile => {
+        profile.id = i++
         profile.isHidden = false
+        this.profileService.pushSkills(profile.skills)
       })
       this.profiles = profiles
     })
+  }
+
+  toggleSkills(event) {
+    let id = event.target.classList[0]
+    if(id) {
+      this.profiles[id].isHidden === true ? this.profiles[id].isHidden = false : this.profiles[id].isHidden = true
+    }
   }
 
 }

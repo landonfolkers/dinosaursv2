@@ -2,13 +2,13 @@
   <section id="profiles-container">
     <h2>Profiles</h2>
     <ul id="profiles">
-      <li *ngFor="let profile of profiles">
-        <div class="profile-card">
-          <header class="profile-header">
-            <img src="../../{{profile.image}}" alt="Image Not Loaded">
-            <h2>{{profile.name}}</h2>
+      <li *ngFor="let profile of profiles" (click)="toggleSkills($event)">
+        <div class="{{profile.id}} profile-card">
+          <header class="{{profile.id}} profile-header">
+            <img src="../../{{profile.image}}" alt="Image Not Loaded" class="{{profile.id}}">
+            <h2 class="{{profile.id}}">{{profile.name}}</h2>
           </header>
-          <app-skill-list [hidden]="!profile.isHidden"></app-skill-list>
+          <app-skill-list class="{{profile.id}}" [hidden]="!profile.isHidden"></app-skill-list>
         </div>
       </li>
     </ul>

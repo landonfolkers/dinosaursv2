@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProfileService } from '../../services/profile.service';
+import { Profile } from '../../models/profile.model';
 
 @Component({
   selector: 'app-skill-list',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./skill-list.component.css']
 })
 export class SkillListComponent implements OnInit {
+  skills: Array<Array<string>> = [];
 
-  constructor() { }
+  constructor(public profileService: ProfileService) { }
 
   ngOnInit() {
+    this.profileService.newSkillsSubject.subscribe(data => {
+      console.log(data)
+    })
+
+    // setTimeout(() => {console.log(this.skills)}, 3000)
   }
 
 }
